@@ -2,24 +2,25 @@
 <html>
 <head>
     <title>My Personal Website</title>
+
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
+            background: #f4f6f9;
+            text-align: center;
         }
 
         header {
             background: #0a192f;
             color: white;
             padding: 20px;
-            text-align: center;
+            animation: slideDown 1s ease-in-out;
         }
 
         nav {
             background: #112240;
             padding: 10px;
-            text-align: center;
         }
 
         nav a {
@@ -34,25 +35,49 @@
         }
 
         .hero {
-            padding: 80px 20px;
-            text-align: center;
+            padding: 60px 20px;
             background: linear-gradient(to right, #0a192f, #112240);
             color: white;
         }
 
+        /* Profile Image */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-top: 20px;
+            animation: zoomIn 1.5s ease-in-out;
+        }
+
         .section {
-            padding: 40px;
-            margin: 20px;
             background: white;
+            margin: 20px;
+            padding: 30px;
             border-radius: 10px;
-            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         footer {
             background: #0a192f;
             color: white;
-            text-align: center;
             padding: 15px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
     </style>
 </head>
@@ -72,28 +97,26 @@
 </nav>
 
 <div class="hero">
+    
+    <!-- PROFILE PHOTO -->
+    <img class="profile-img" src="https://drive.google.com/file/d/1-CQrBqyGttSRoztrA1Y86l3bAqFrqMjd/view?usp=sharing="Profile Photo">
+
     <h2>Hello, I'm Your Name 👋</h2>
-    <p>I create smart projects using Arduino, IoT, and technology.</p>
+    <p>I build smart projects using Arduino, IoT & technology</p>
 </div>
 
 <div class="section" id="about">
     <h2>About Me</h2>
-    <p>**About Me**
-
-I am a passionate innovator driven by curiosity, creativity, and a strong desire to make a meaningful impact through technology. With a deep interest in building smart and practical solutions, I actively work on projects that address real-world challenges in areas such as automation, safety, environment, and intelligent systems.
-
-My journey is defined by continuous learning and hands-on experience. From developing smart devices like automated systems, sensors-based applications, and IoT solutions, to exploring advanced concepts in engineering and design, I constantly push myself to think beyond conventional boundaries. I believe in transforming ideas into reality through dedication, experimentation, and innovation.
-
-I thrive in environments that challenge me to grow and improve. With access to a collaborative lab space and a mindset focused on problem-solving, I enjoy creating opportunities not just for myself but also for others to learn, build, and succeed.
-
-My vision is to leverage technology to create smarter, safer, and more sustainable solutions for the future. I am committed to excellence, driven by purpose, and always ready to take on new challenges that inspire progress and innovation.
-</p>
+    <p>I am passionate about building innovative systems like smart automation, IoT devices, and real-world solutions.</p>
 </div>
 
 <div class="section" id="projects">
     <h2>My Projects</h2>
-    <p>• IOT Projects</p>
-   
+    <p>✔ Smart Irrigation System</p>
+    <p>✔ Fire Detection Alarm</p>
+    <p>✔ Automatic Water Tap</p>
+    <p>✔ Smart Traffic System</p>
+</div>
 
 <div class="section" id="contact">
     <h2>Contact Me</h2>
@@ -102,7 +125,7 @@ My vision is to leverage technology to create smarter, safer, and more sustainab
 </div>
 
 <footer>
-    <p>© 2026 J.Pujith Anand</p>
+    <p>J.Pujith Anand</p>
 </footer>
 
 </body>
